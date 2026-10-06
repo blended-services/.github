@@ -54,8 +54,6 @@ def banner(t, mark):
         f'<path d="{d}" fill="none" stroke="{t["faint"]}" stroke-opacity="{t["faint_op"] * (1.6 - i / 14):.3f}" stroke-width="1.2"/>'
         for i, d in enumerate(rings)
     )
-    tagline = "> we build the reporting the off-the-shelf tools don't"
-    tag_w = 640
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="Blended Services Group — maintenance, projects, landscaping and tree services, Melbourne">
 <defs>
   <radialGradient id="glow" cx="50%" cy="50%" r="50%">
@@ -67,9 +65,6 @@ def banner(t, mark):
     <stop offset=".5" stop-color="{t["accent"]}" stop-opacity=".9"/>
     <stop offset="1" stop-color="{t["accent"]}" stop-opacity="0"/>
   </linearGradient>
-  <clipPath id="type"><rect x="350" y="218" height="34" width="0">
-    <animate attributeName="width" from="0" to="{tag_w + 4}" begin="0.6s" dur="2.6s" fill="freeze"/>
-  </rect></clipPath>
 </defs>
 <rect width="1280" height="340" fill="{t["bg"]}"/>
 <g>{ring_paths}
@@ -81,16 +76,9 @@ def banner(t, mark):
 <image href="{mark}" x="69" y="55" width="230" height="230">
   <animateTransform attributeName="transform" type="rotate" from="0 184 170" to="360 184 170" dur="90s" repeatCount="indefinite"/>
 </image>
-<text x="350" y="140" font-family="{SANS}" font-size="60" font-weight="700" fill="{t["ink"]}" letter-spacing="-0.5">Blended Services Group</text>
-<text x="352" y="182" font-family="{SANS}" font-size="15" font-weight="600" fill="{t["accent_text"]}" letter-spacing="3.5">MAINTENANCE · PROJECTS · LANDSCAPING · TREE SERVICES</text>
-<g clip-path="url(#type)">
-  <text x="350" y="242" font-family="{MONO}" font-size="19" fill="{t["tag"]}" textLength="{tag_w}" lengthAdjust="spacing">{tagline.replace("'", "&#8217;")}</text>
-</g>
-<rect y="225" width="10" height="22" fill="{t["accent"]}" x="350">
-  <animate attributeName="x" from="350" to="{350 + tag_w + 8}" begin="0.6s" dur="2.6s" fill="freeze"/>
-  <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1.05s" repeatCount="indefinite"/>
-</rect>
-<text x="352" y="294" font-family="{SANS}" font-size="13" fill="{t["sub"]}" letter-spacing="1.5">MELBOURNE  ·  INTERNAL ENGINEERING  ·  TYPESCRIPT · NEXT.JS · PYTHON · SQLITE · AZURE</text>
+<text x="350" y="152" font-family="{SANS}" font-size="60" font-weight="700" fill="{t["ink"]}" letter-spacing="-0.5">Blended Services Group</text>
+<text x="352" y="196" font-family="{SANS}" font-size="15" font-weight="600" fill="{t["accent_text"]}" letter-spacing="3.5">MAINTENANCE · PROJECTS · LANDSCAPING · TREE SERVICES</text>
+<text x="352" y="240" font-family="{SANS}" font-size="13" fill="{t["sub"]}" letter-spacing="1.5">MELBOURNE  ·  INTERNAL ENGINEERING  ·  TYPESCRIPT · NEXT.JS · PYTHON · SQLITE · AZURE</text>
 <rect x="0" y="337" width="1280" height="3" fill="{t["accent"]}" fill-opacity=".18"/>
 <rect x="-260" y="337" width="260" height="3" fill="url(#sweep)">
   <animate attributeName="x" from="-260" to="1280" dur="7s" repeatCount="indefinite"/>
