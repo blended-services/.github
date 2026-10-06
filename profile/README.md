@@ -19,7 +19,7 @@ Field crews do the work. This org holds the software that keeps score: it reads 
 | Repository | What it does | Runs on |
 |---|---|---|
 | [**aroflo-connector**](https://github.com/blended-services/aroflo-connector) | Reporting over the AroFlo API and Xero: per-PM workload, gross profit by division, daily WIP, triage, and the office wallboards. | Next.js · SQLite · Azure App Service |
-| **bsg-maintenance-automation** | Pulls council tree records overnight, builds the maintenance master, sends the daily maintenance and planting reports, and prepares council invoicing. | Python · Node · Azure Container Apps jobs |
+| [**bsg-maintenance-automation**](https://github.com/blended-services/bsg-maintenance-automation) | Pulls council tree records overnight, builds the maintenance master, sends the daily maintenance and planting reports, and prepares council invoicing. | Python · Node · Azure Container Apps jobs |
 
 ### How we work
 
